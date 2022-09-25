@@ -28,6 +28,12 @@ pipeline {
       }
     }
 
+    stage('Archieve') {
+      steps {
+        archiveArtifacts '**/distribution/*.zip'
+      }
+    }
+
   }
   tools {
     nodejs 'nodejs'
